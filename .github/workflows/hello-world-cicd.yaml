@@ -27,7 +27,10 @@ jobs:
       
     - name: Check coding style
       run: |
+        source venv/bin/activate
         black .
-        
+
     - name: Run python scripts
-      run: python hello_world.py
+      run: |
+        source venv/bin/activate
+        python hello_world.py
