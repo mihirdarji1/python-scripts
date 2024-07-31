@@ -1,0 +1,19 @@
+name: Python scripts
+
+on: ["pull", "pull_request"]
+
+jobs:
+  python-script-runner:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Python Setup
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+      
+    - name: Run python scripts
+      run: python hello_world.py
