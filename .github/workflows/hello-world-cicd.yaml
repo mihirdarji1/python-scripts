@@ -25,5 +25,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
       
+    - name: Check coding style
+      run: |
+        black .
+        
     - name: Run python scripts
       run: python hello_world.py
