@@ -28,7 +28,7 @@ jobs:
     - name: Check coding style
       run: |
         source venv/bin/activate
-        black .
+        black check .
 
     - name: Run python scripts
       run: |
