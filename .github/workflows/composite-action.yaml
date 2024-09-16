@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: mihirdarji1/python-scripts/.github/actions/composite-action@composite-action
+        uses: mihirdarji1/python-scripts/.github/actions/composite-action@v3.0.0
 
       - run: echo random-number "$RANDOM_NUMBER"
         shell: bash
