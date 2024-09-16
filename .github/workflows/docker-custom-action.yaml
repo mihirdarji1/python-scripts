@@ -16,13 +16,13 @@ jobs:
         run: echo $GITHUB_OUTPUT
 
       - name: Hello world action version 2
-        id: hello
+        id: hello2
         uses: mihirdarji1/python-scripts/.github/actions/docker-action@v2.0.0
         with: 
           who-to-greet: 'v2.0.0'
       # Use the output from the `hello` step
       - name: Get the output time of version 2
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: echo "The time was ${{ steps.hello2.outputs.time }}"
 
       - name: print github output version 2
         run: echo $GITHUB_OUTPUT
