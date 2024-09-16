@@ -13,3 +13,12 @@ jobs:
         shell: bash
         env:
           RANDOM_NUMBER: ${{ steps.foo.outputs.random-number }}
+
+      - uses: actions/checkout@v4
+      - id: foo1
+        uses: mihirdarji1/python-scripts/.github/actions/composite-action@v4.0.0
+
+      - run: echo random-number "$RANDOM_NUMBER"
+        shell: bash
+        env:
+          RANDOM_NUMBER: ${{ steps.foo1.outputs.random-number }}
