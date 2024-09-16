@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: mihirdarji1/python-scripts@docker-custom-action
+        uses: mihirdarji1/python-scripts/.github/actions/docker-action@docker-custom-action
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
