@@ -1,10 +1,18 @@
 name: Python scripts
 
-on: ["push", "pull_request"]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   python-script-runner:
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: ${{ github.ref }}-branch
+      cancel-in-progress: true
 
     steps:
     - name: Checkout code
