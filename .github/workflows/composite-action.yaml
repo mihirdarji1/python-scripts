@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: mihirdarji1/python-scripts@composite-action
+        uses: mihirdarji1/python-scripts/actions/composite-action@composite-action
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number "$RANDOM_NUMBER"
